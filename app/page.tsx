@@ -38,8 +38,11 @@ export default function Home() {
       <header className="site-header">
         <div className="container nav" aria-label="Primary navigation">
           <a className="brand" href="#top" aria-label="ModEX home">
-            <span className="brand-mark" aria-hidden="true">MX</span>
-            <span>ModEX</span>
+            <img
+              className="brand-logo"
+              src="/modex-logo-dark.svg"
+              alt="ModEX — Financial Modeling Experts"
+            />
           </a>
           <nav className="nav-links" aria-label="Main menu">
             <a href="#programs">Programs</a>
@@ -191,10 +194,13 @@ export default function Home() {
 
       <footer className="footer" id="community">
         <div className="container footer-grid">
-          <div className="brand" style={{ color: "white" }}>
-            <span className="brand-mark" aria-hidden="true">MX</span>
-            <span>ModEX</span>
-          </div>
+          <a className="brand" href="#top" aria-label="Back to ModEX home">
+            <img
+              className="brand-logo brand-logo-footer"
+              src="/modex-logo-dark.svg"
+              alt="ModEX — Financial Modeling Experts"
+            />
+          </a>
           <small>Build Better Models. Make Better Decisions.</small>
         </div>
       </footer>
