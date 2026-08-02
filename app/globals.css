@@ -37,8 +37,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(219,226,234,.85); }
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 900; color: var(--modex-navy); font-size: 1.25rem; }
-.brand-mark { width: 38px; height: 38px; display: grid; place-items: center; background: var(--modex-navy); color: var(--modex-gold); border-radius: 10px; font-size: .9rem; }
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.brand-logo { display: block; width: 190px; max-width: 100%; height: auto; }
+.brand-logo-footer { width: 215px; }
 .nav-links { display: flex; align-items: center; gap: 22px; font-weight: 700; font-size: .93rem; }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
 
@@ -73,9 +74,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .method-item { padding: 24px; border-left: 4px solid var(--modex-gold); background: rgba(255,255,255,.08); border-radius: 0 14px 14px 0; }
 .method-item h3 { margin: 0 0 8px; }
 .method-item p { margin: 0; color: #d7e0eb; font-size: .94rem; }
-.footer { padding: 40px 0; background: #07182f; color: #d7e0eb; }
+.footer { padding: 40px 0; background: var(--modex-white); color: var(--modex-navy); border-top: 1px solid var(--border); }
 .footer-grid { display: flex; justify-content: space-between; gap: 24px; align-items: center; }
-.footer small { color: #aab8c8; }
+.footer small { color: var(--modex-muted); }
 
 [dir="rtl"] body { font-family: "IBM Plex Sans Arabic", Tahoma, Arial, sans-serif; }
 [dir="rtl"] .card-list { padding-left: 0; padding-right: 20px; }
@@ -91,7 +92,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 620px) {
   .container { width: min(100% - 28px, 1180px); }
-  .nav { min-height: 68px; }
+  .nav { min-height: 68px; gap: 12px; }
+  .brand-logo { width: 155px; }
+  .brand-logo-footer { width: 190px; }
   .nav-actions .button-ghost { display: none; }
   .hero { padding: 58px 0 64px; }
   .hero h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
