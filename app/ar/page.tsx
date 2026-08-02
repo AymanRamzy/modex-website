@@ -17,8 +17,11 @@ export default function ArabicHome() {
       <header className="site-header">
         <div className="container nav" aria-label="التنقل الرئيسي">
           <a className="brand" href="#top" aria-label="الصفحة الرئيسية لمودكس">
-            <span className="brand-mark" aria-hidden="true">MX</span>
-            <span>ModEX</span>
+            <img
+              className="brand-logo"
+              src="/modex-logo-dark.svg"
+              alt="ModEX — Financial Modeling Experts"
+            />
           </a>
           <nav className="nav-links" aria-label="القائمة الرئيسية">
             <a href="#programs">البرامج</a>
@@ -120,7 +123,18 @@ export default function ArabicHome() {
         </div>
       </section>
 
-      <footer className="footer"><div className="container footer-grid"><div className="brand" style={{ color: "white" }}><span className="brand-mark" aria-hidden="true">MX</span><span>ModEX</span></div><small>ابنِ نماذج أفضل. واتخذ قرارات أفضل.</small></div></footer>
+      <footer className="footer">
+        <div className="container footer-grid">
+          <a className="brand" href="#top" aria-label="العودة إلى الصفحة الرئيسية">
+            <img
+              className="brand-logo brand-logo-footer"
+              src="/modex-logo-dark.svg"
+              alt="ModEX — Financial Modeling Experts"
+            />
+          </a>
+          <small>ابنِ نماذج أفضل. واتخذ قرارات أفضل.</small>
+        </div>
+      </footer>
     </main>
   );
 }
