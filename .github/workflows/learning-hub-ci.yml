@@ -1,0 +1,32 @@
+name: Learning Hub CI
+
+on:
+  pull_request:
+    paths:
+      - "learning-hub/**"
+      - ".github/workflows/learning-hub-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "learning-hub/**"
+      - ".github/workflows/learning-hub-ci.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: learning-hub
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install
+      - name: TypeScript check
+        run: npm run typecheck
+      - name: Production build
+        run: npm run build
